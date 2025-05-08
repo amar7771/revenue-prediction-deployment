@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle as pkl
-model=pkl.load(open(r'C:\Users\atefr\Downloads\linear_regression_model.pkl','rb'))
+model=pkl.load(open(r'linear_regression_model.pkl','rb'))
 features=['City', 'Number of Referrals', 'Tenure in Months', 'Phone Service','Offer',
        'Avg Monthly Long Distance Charges', 'Multiple Lines',
        'Internet Service', 'Internet Type', 'Avg Monthly GB Download',
@@ -22,9 +22,9 @@ cat_features = [
 target='City'
 
 def load_encoder(feature):
-    return pkl.load(open(f'C:\\Users\\atefr\\Downloads\\{feature}_encoder.pkl','rb'))
+    return pkl.load(open(f'{feature}_encoder.pkl','rb'))
 
-target_encoder=pkl.load(open(f'C:\\Users\\atefr\\Downloads\\city_target_mean.pkl','rb'))
+target_encoder=pkl.load(open(f'city_target_mean.pkl','rb'))
 
 
 def main():
